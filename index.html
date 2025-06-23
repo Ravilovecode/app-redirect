@@ -5,8 +5,15 @@
   <script>
     function redirectToApp() {
       const params = new URLSearchParams(window.location.search);
-      const redirect = params.get("redirect") || "pbt://signup-complete";
-      window.location.href = redirect;
+      const token = params.get("token"); // Get token from URL
+      if (token) {
+        const redirect = "pbt://signup-complete?token=" + encodeURIComponent(token);
+        window.location.href = redirect;
+      } else {
+        // Fallback if no token is provided
+        window.location.href = "pbt://signup-complete";
+        console.error("No token found in URL");
+      }
     }
   </script>
 </head>
