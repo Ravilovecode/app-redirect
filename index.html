@@ -4,16 +4,9 @@
   <title>Signup Complete</title>
   <script>
     function redirectToApp() {
-      const params = new URLSearchParams(window.location.search);
-      const token = params.get("token"); // Get token from URL
-      if (token) {
-        const redirect = "pbt://signup-complete?token=" + encodeURIComponent(token);
-        window.location.href = redirect;
-      } else {
-        // Fallback if no token is provided
-        window.location.href = "pbt://signup-complete";
-        console.error("No token found in URL");
-      }
+      const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJocGwiLCJhdWQiOiJtZW1iZXIudGVhY2hlci5hY3RpdmUiLCJzdWIiOiI2ODA2MDk0YmI1OGY3OWE3OTk0MjEyN2IiLCJpYXQiOjE3NTA2ODgxODMsImV4cCI6MTc1MDY4OTk4Mywia2V5IjoiK35MIn0.DhhjoRO6l2c8divBKoxeIiVAj63VB5uCXwK7xh5NhYM"; // Directly provided token
+      const redirect = `pbt://signup-complete?token=${token}`; // Use raw token
+      window.location.href = redirect;
     }
   </script>
 </head>
