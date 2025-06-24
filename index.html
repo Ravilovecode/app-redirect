@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <title>Signup Complete</title>
@@ -16,41 +16,5 @@
   <button onclick="redirectToApp()">Open App</button>
 </body>
 </html>
- -->
 
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Redirecting…</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script>
-    window.onload = () => {
-      // grab token from query-string
-      const params = new URLSearchParams(location.search);
-      const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJocGwiLCJhdWQiOiJtZW1iZXIudGVhY2hlci5hY3RpdmUiLCJzdWIiOiI2ODA2MDk0YmI1OGY3OWE3OTk0MjEyN2IiLCJpYXQiOjE3NTA3Mzg5MjksImV4cCI6MTc1MDc0MDcyOSwia2V5IjoiayVnIn0.v-bdMN3x6XPAFe688L--fwM81pY-EIlUWAkoWEDo2Wo";
-      
-      // 1) try your custom scheme (no encoding)
-      const appUrl = `pbt://signup-complete?token=${token}`;
-      
-      // 2) Android intent fallback (no encoding)
-      const intentUrl = 
-        `intent://signup-complete?token=${token}` +
-        `#Intent;scheme=pbt;package=com.pbt.pbtapp;end`;
 
-      // 3) Play Store fallback
-      const playStore = "https://play.google.com/store/apps/details?id=com.pbt.pbtapp";
-
-      // fire off the intent URL (will open app if installed)
-      location.href = intentUrl;
-
-      // if after ~1.5 s you’re still here, go to Play Store
-      setTimeout(() => location.href = playStore, 1500);
-    };
-  </script>
-</head>
-<body>
-  <p>Redirecting to app… if nothing happens, 
-    <a href="https://play.google.com/store/apps/details?id=com.pbt.pbtapp">get the app here</a>.
-  </p>
-</body>
-</html>
