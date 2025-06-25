@@ -23,8 +23,10 @@
   <title>Signup Complete</title>
   <script>
     function redirectToApp() {
-      const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJocGwiLCJhdWQiOiJtZW1iZXIudGVhY2hlci5hY3RpdmUiLCJzdWIiOiI2ODA2MDk0YmI1OGY3OWE3OTk0MjEyN2IiLCJpYXQiOjE3NTA4MzE1NDYsImV4cCI6MTc1MDgzMzM0Niwia2V5IjoiTDRFIn0.XkVyfiXCgd2-lC2bJbZppKSX6672Fub62W7JR8Jm17w";
-      const redirect = `pbt://signup-complete`; // Added target=home
+      const accessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJocGwiLCJhdWQiOiJtZW1iZXIudGVhY2hlci5hY3RpdmUiLCJzdWIiOiI2ODA2MDk0YmI1OGY3OWE3OTk0MjEyN2IiLCJpYXQiOjE3NTA4NDYxMTUsImV4cCI6MTc1MDg0NzkxNSwia2V5IjoiK0U0In0.UAO8WQIc6243DBHuvmYS_lVbl38PA_ycRiUapJ31leU";
+      const refreshToken ='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJocGwiLCJhdWQiOiJtZW1iZXIudGVhY2hlci5hY3RpdmUiLCJzdWIiOiI2ODA2MDk0YmI1OGY3OWE3OTk0MjEyN2IiLCJpYXQiOjE3NTA4NDYxMTUsImV4cCI6MTc2MTIxNDExNSwia2V5IjoiPjIpIn0.ArbI3fxgKfjwvshMNGVo3G3tuAyfh5pbc4XBicZ-Ijc';
+      const resKey = '';
+      const redirect = `pbt://signup-complete?accessToken=${accessToken}&refreshToken=${refreshToken}&resKey=${resKey}`; // Added target=home
       window.location.href = redirect;
     }
   </script>
