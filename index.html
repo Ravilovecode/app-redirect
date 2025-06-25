@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
 <head>
   <title>Signup Complete</title>
@@ -6,6 +6,25 @@
     function redirectToApp() {
       const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJocGwiLCJhdWQiOiJtZW1iZXIudGVhY2hlci5hY3RpdmUiLCJzdWIiOiI2ODA2MDk0YmI1OGY3OWE3OTk0MjEyN2IiLCJpYXQiOjE3NTA4MzE1NDYsImV4cCI6MTc1MDgzMzM0Niwia2V5IjoiTDRFIn0.XkVyfiXCgd2-lC2bJbZppKSX6672Fub62W7JR8Jm17w";
       const redirect = `pbt://signup-complete?token=${token}&target=home`; // Added target=home
+      window.location.href = redirect;
+    }
+  </script>
+</head>
+<body>
+  <h2>Signup Successful</h2>
+  <p>Click the button below to continue to the app.</p>
+  <button onclick="redirectToApp()">Open App</button>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Signup Complete</title>
+  <script>
+    function redirectToApp() {
+      const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJocGwiLCJhdWQiOiJtZW1iZXIudGVhY2hlci5hY3RpdmUiLCJzdWIiOiI2ODA2MDk0YmI1OGY3OWE3OTk0MjEyN2IiLCJpYXQiOjE3NTA4MzE1NDYsImV4cCI6MTc1MDgzMzM0Niwia2V5IjoiTDRFIn0.XkVyfiXCgd2-lC2bJbZppKSX6672Fub62W7JR8Jm17w";
+      const redirect = `pbt://signup-complete`; // Added target=home
       window.location.href = redirect;
     }
   </script>
