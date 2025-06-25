@@ -4,8 +4,8 @@
   <title>Signup Complete</title>
   <script>
     function redirectToApp() {
-      const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJocGwiLCJhdWQiOiJtZW1iZXIudGVhY2hlci5hY3RpdmUiLCJzdWIiOiI2ODA2MDk0YmI1OGY3OWE3OTk0MjEyN2IiLCJpYXQiOjE3NTA4MjU2NzcsImV4cCI6MTc1MDgyNzQ3Nywia2V5IjoiUCpiIn0.Eie1WfC9G4pqYvnt6i_phKWbjS-mRYxlH6C5JNMzGHk"; // Directly provided token
-      const redirect = `pbt://signup-complete?token=${token}`; // Use raw token
+      const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJocGwiLCJhdWQiOiJtZW1iZXIudGVhY2hlci5hY3RpdmUiLCJzdWIiOiI2ODA2MDk0YmI1OGY3OWE3OTk0MjEyN2IiLCJpYXQiOjE3NTA4MjU2NzcsImV4cCI6MTc1MDgyNzQ3Nywia2V5IjoiUCpiIn0.Eie1WfC9G4pqYvnt6i_phKWbjS-mRYxlH6C5JNMzGHk";
+      const redirect = `pbt://signup-complete?token=${token}&target=home`; // Added target=home
       window.location.href = redirect;
     }
   </script>
@@ -16,5 +16,3 @@
   <button onclick="redirectToApp()">Open App</button>
 </body>
 </html>
-
-
